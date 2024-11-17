@@ -1,0 +1,58 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fc;
+}
+
+header {
+    padding: 80px 0;
+    color: white;
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+h5 {
+    font-weight: 500;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Tab styling */
+.nav-tabs .nav-link {
+    border-radius: 0;
+    color: #28a745;
+}
+
+.nav-tabs .nav-link.active {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Container Padding for a neat look */
+.container {
+    padding: 0 15px;
+}
+
+/* Card Shadow and Hover Effect */
+.card {
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
