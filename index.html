@@ -1,70 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ercan Bagra</title>
+    <title>Ercan Bagra – Apps</title>
+    <meta name="description" content="Mobile apps by Ercan Bagra: Akılhar, Peeko and Course Management. App details, privacy policies, contest rules and account deletion in one place.">
     <link rel="icon" href="assets/favicon.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <header class="header-section py-5 text-center text-white" style="background: #3a7bd5; background: linear-gradient(45deg, #3a7bd5, #00d2ff);">
-        <div class="container">
-            <h1 class="display-3 fw-bold mb-4">Welcome to My Apps</h1>
-            <p class="lead fs-4">Explore all our apps and check their privacy policies in one place. Simple, fast, and transparent.</p>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="logo" href="index.html"><span class="mark">EB</span> Ercan Bagra</a>
+            <nav>
+                <a href="#apps">Apps</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </div>
     </header>
 
-    <!-- App List Section -->
-    <main class="container py-5">
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <!-- Course Management App -->
-            <div class="col">
-                <div class="card shadow-sm border-0 rounded-4">
-                    <img src="./assets/quran.png" class="card-img-top rounded-4" alt="Course-Management">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Course Management</h5>
-                        <p class="card-text">An all-in-one solution to manage courses, students, and academic progress efficiently.</p>
-                        <a href="course-management/index.html" class="btn btn-primary px-4 py-2 rounded-3">Learn More</a>
-                    </div>
-                </div>
+    <main>
+        <section class="hero">
+            <div class="wrap">
+                <span class="eyebrow">Independent app developer</span>
+                <h1>Simple apps, <span class="grad">built with care.</span></h1>
+                <p>Here you'll find every app I make, with its details, privacy policy and, where needed, contest
+                    rules and account deletion steps. Clear and in one place.</p>
             </div>
-                        <div class="col">
-                <div class="card shadow-sm border-0 rounded-4">
-                    <img src="./assets/peeko.png" class="card-img-top rounded-4" alt="Course-Management">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Peeko</h5>
-                        <p class="card-text">An all-in-one way to shop live TikTok shows, pay securely, and track your orders to your door.</p>
-                        <a href="peeko/index.html" class="btn btn-primary px-4 py-2 rounded-3">Learn More</a>
+        </section>
+
+        <div class="wrap" id="apps">
+            <h2 class="section-title">My apps</h2>
+            <div class="apps">
+
+                <article class="app-card" style="--accent:#6b5ce7">
+                    <div class="head">
+                        <img src="assets/akilhar.png" class="app-icon" alt="Akılhar icon" width="64" height="64">
+                        <div>
+                            <h3>Akılhar</h3>
+                            <div class="tag">Trivia game · Turkish · iOS &amp; Android</div>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card shadow-sm border-0 rounded-4">
-                    <img src="./assets/akilhar.png" class="card-img-top rounded-4" alt="Akılhar">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Akılhar</h5>
-                        <p class="card-text">A Turkish trivia game: find cities on the map of Turkey, climb the weekly leaderboard and win prizes.</p>
-                        <a href="akilhar/index.html" class="btn btn-primary px-4 py-2 rounded-3">Learn More</a>
+                    <p>Find cities on the map of Turkey, play flag, capital, plate and word games, climb the weekly
+                        leaderboard and win prizes in free tournaments.</p>
+                    <div class="links">
+                        <a href="akilhar/index.html" class="btn primary">Details</a>
+                        <a href="akilhar/index.html#gizlilik" class="btn ghost">Gizlilik</a>
+                        <a href="akilhar/index.html#yarisma-kurallari" class="btn ghost">Kurallar</a>
+                        <a href="akilhar/index.html#hesap-silme" class="btn ghost">Hesap silme</a>
                     </div>
-                </div>
+                </article>
+
+                <article class="app-card" style="--accent:#b84f2b">
+                    <div class="head">
+                        <img src="assets/peeko.png" class="app-icon" alt="Peeko icon" width="64" height="64">
+                        <div>
+                            <h3>Peeko</h3>
+                            <div class="tag">Shopping</div>
+                        </div>
+                    </div>
+                    <p>Shop items from live TikTok shows, pay securely, choose your carrier and track your parcel all
+                        the way to your door.</p>
+                    <div class="links">
+                        <a href="peeko/index.html" class="btn primary">Details</a>
+                        <a href="peeko/index.html#privacy-policy" class="btn ghost">Privacy</a>
+                    </div>
+                </article>
+
+                <article class="app-card" style="--accent:#2f8f5b">
+                    <div class="head">
+                        <img src="assets/quran.png" class="app-icon contain" alt="Course Management icon" width="64" height="64">
+                        <div>
+                            <h3>Course Management</h3>
+                            <div class="tag">Education</div>
+                        </div>
+                    </div>
+                    <p>An all-in-one way to manage courses, students and academic progress, and to share materials
+                        with students.</p>
+                    <div class="links">
+                        <a href="course-management/index.html" class="btn primary">Details</a>
+                        <a href="course-management/index.html#privacy-policy" class="btn ghost">Privacy</a>
+                    </div>
+                </article>
+
             </div>
-            <!-- More apps can be added here -->
+
+            <section class="contact" id="contact">
+                <div>
+                    <h2>Questions or requests?</h2>
+                    <p>Support, privacy requests and account deletion: write to me and I'll answer as soon as I can.</p>
+                </div>
+                <a class="btn primary" href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a>
+            </section>
         </div>
     </main>
 
-    <!-- Footer Section -->
-    <footer class="footer-section py-4 bg-dark text-white text-center">
-        <p class="mb-0">&copy; 2024 Ercan Bagra. All rights reserved.</p>
+    <footer>
+        <div class="wrap">
+            <span>&copy; 2026 Ercan Bagra</span>
+            <a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS & FontAwesome -->
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

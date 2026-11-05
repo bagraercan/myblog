@@ -4,119 +4,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akılhar - Bilgi Yarışması</title>
+    <title>Akılhar – Bilgi Yarışması</title>
+    <meta name="description" content="Akılhar: Türkiye haritasında şehirleri bul, bilgi oyunları oyna, haftalık yarışmada ve ücretsiz turnuvalarda ödül kazan. Gizlilik politikası, yarışma kuralları ve hesap silme.">
     <link rel="icon" href="../assets/akilhar.png" type="image/png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
     <style>
-        /* Akılhar's violet instead of the site's green tabs */
-        .nav-tabs .nav-link { color: #7C6FF0; }
-        .nav-tabs .nav-link.active { background-color: #7C6FF0; color: white; }
-        .tab-pane h3 { font-size: 1.15rem; font-weight: 600; margin-top: 1.5rem; }
-        .app-icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2); }
+        :root { --accent: #6b5ce7; --accent-2: #ff8a3d; }
+        @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --accent: #8f83ff; } }
+        :root[data-theme="dark"] { --accent: #8f83ff; }
+        .app-hero { background: linear-gradient(135deg, #6b5ce7, #ff8a3d); }
     </style>
 </head>
 
 <body>
 
-    <!-- Header Section -->
-    <header class="header-section py-5 text-center text-white"
-        style="background: #7C6FF0; background: linear-gradient(45deg, #7C6FF0, #FF8A3D);">
-        <div class="container">
-            <img src="../assets/akilhar.png" alt="Akılhar" class="app-icon mb-3">
-            <h1 class="display-4 fw-bold">Akılhar</h1>
-            <p class="lead fs-4">Türkiye haritasında şehirleri bul, yarış, ilk 3'e gir ve ödül kazan!</p>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="logo" href="../index.html"><span class="mark">EB</span> Ercan Bagra</a>
+            <nav>
+                <a href="../index.html">Tüm uygulamalar</a>
+            </nav>
         </div>
     </header>
 
-    <!-- Tab Navigation and Content -->
-    <main class="container py-5">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="uygulama-tab" data-bs-toggle="tab" href="#uygulama" role="tab"
-                    aria-controls="uygulama" aria-selected="true">Uygulama</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="gizlilik-tab" data-bs-toggle="tab" href="#gizlilik" role="tab"
-                    aria-controls="gizlilik" aria-selected="false">Gizlilik Politikası</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="yarisma-kurallari-tab" data-bs-toggle="tab" href="#yarisma-kurallari" role="tab"
-                    aria-controls="yarisma-kurallari" aria-selected="false">Yarışma Kuralları</a>
-            </li>
-            <li class="nav-item" role="presentation">
-                <a class="nav-link" id="hesap-silme-tab" data-bs-toggle="tab" href="#hesap-silme" role="tab"
-                    aria-controls="hesap-silme" aria-selected="false">Hesap Silme</a>
-            </li>
-        </ul>
+    <div class="app-hero">
+        <div class="wrap narrow">
+            <img src="../assets/akilhar.png" alt="Akılhar simgesi" class="app-icon" width="96" height="96">
+            <div>
+                <h1>Akılhar</h1>
+                <p>Türkiye haritasında şehirleri bul, bilgini konuştur, ilk 3'e gir ve ödül kazan!</p>
+                <div class="chips">
+                    <span class="chip">Harita oyunu ücretsiz</span>
+                    <span class="chip">Haftalık yarışma</span>
+                    <span class="chip">Ücretsiz turnuvalar</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <div class="tab-content mt-4" id="myTabContent">
+    <nav class="toc" aria-label="Bölümler">
+        <div class="wrap narrow">
+            <a href="#uygulama">Uygulama</a>
+            <a href="#gizlilik">Gizlilik Politikası</a>
+            <a href="#yarisma-kurallari">Yarışma Kuralları</a>
+            <a href="#hesap-silme">Hesap Silme</a>
+        </div>
+    </nav>
+
+    <main class="doc">
+        <div class="wrap narrow">
 
             <!-- App -->
-            <div class="tab-pane fade show active" id="uygulama" role="tabpanel" aria-labelledby="uygulama-tab">
-                <h2 class="mt-3">Akılhar - Bilgi Yarışması</h2>
-                <p>Akılhar, Türkiye haritasında şehirleri bulduğun ve bilgini konuşturduğun ücretsiz bir bilgi
-                    yarışması oyunudur.</p>
-                <ul>
-                    <li><strong>Haftalık Harita Yarışması:</strong> hafta salı başlar, pazar gecesi biter. Haftanın ilk
-                        3'ü ödül kazanır. Harita oyunu her zaman ücretsizdir.</li>
-                    <li><strong>Ödüller:</strong> kazandığın ödüller ödül bakiyene eklenir; bakiyen 100 TL'ye ulaşınca
-                        A101 hediye kartı isteyebilirsin.</li>
-                    <li><strong>Diğer oyunlar:</strong> matematik, kelime ve daha fazlası.</li>
-                    <li><strong>Avatarlar ve sıralama:</strong> 140'tan fazla avatar, haftalık lider tablosu ve kazanma
-                        geçmişi.</li>
-                </ul>
-                <p>Google ve Apple, Akılhar'daki yarışmaların sponsoru değildir ve yarışmalarla hiçbir şekilde ilişkili
-                    değildir.</p>
-            </div>
+            <section id="uygulama">
+                <h2>Akılhar – Bilgi Yarışması</h2>
+                <p>Akılhar, genel kültürünü ve hızını sınayan bilgi oyunlarından oluşur. Harita oyunu her zaman
+                    ücretsizdir; haftalık yarışmaya ve turnuvalara katılmak için hiçbir şey satın alman gerekmez.</p>
+
+                <div class="grid-2">
+                    <div class="tile"><strong>🗺️ Harita oyunu</strong><span>Ekrandaki şehri Türkiye haritasında bul.
+                            Seri yaptıkça puanın artar. Her zaman ücretsiz.</span></div>
+                    <div class="tile"><strong>🏆 Haftalık yarışma</strong><span>Hafta salı başlar, pazar gecesi biter.
+                            Haftanın ilk 3'ü ödül kazanır.</span></div>
+                    <div class="tile"><strong>🎯 Turnuvalar</strong><span>Haftada en fazla bir turnuva. Katılım ücretsiz,
+                            turnuvanın tüm oyunları içinde ücretsiz.</span></div>
+                    <div class="tile"><strong>🎁 Ödül bakiyesi</strong><span>Ödüller bakiyene eklenir; 100 TL'de A101
+                            hediye kartı isteyebilirsin.</span></div>
+                </div>
+
+                <h3>Diğer oyunlar</h3>
+                <p>Matematik, Başkentler, Plaka, Bayrak, Logo, Kulüpler, Arabalar, Arabalar &amp; Ülkeler ve
+                    Kelimeler. Her ücretli oyunu bir kez ücretsiz deneyebilirsin. Satın aldığın oyun 7 gün açık kalır;
+                    birden fazla oyun alınca indirim uygulanır, Tüm Oyunlar Paketi hepsini tek fiyata açar.</p>
+
+                <h3>Mağaza</h3>
+                <p>140'tan fazla avatar ve lider tablosunda herkesin gördüğü çerçeveler. Aldığın avatar ve çerçeveler
+                    hep senin kalır. İstersen reklamları da tek seferlik bir ödemeyle kaldırabilirsin.</p>
+
+                <h3>Ödeme</h3>
+                <p>Kartla (Stripe), Havale / EFT ile ya da hediye koduyla ödeyebilirsin. Ödeme sayfasındaki bahşiş
+                    isteğe bağlıdır.</p>
+
+                <p class="note">Google ve Apple, Akılhar'daki yarışmaların sponsoru değildir ve yarışmalarla hiçbir
+                    şekilde ilişkili değildir.</p>
+            </section>
 
             <!-- Privacy policy -->
-            <div class="tab-pane fade" id="gizlilik" role="tabpanel" aria-labelledby="gizlilik-tab">
-                <h2 class="mt-3">Gizlilik Politikası</h2>
-                <p><strong>Yürürlük tarihi: 5 Kasım 2026</strong></p>
+            <section id="gizlilik">
+                <h2>Gizlilik Politikası</h2>
+                <p class="meta">Yürürlük tarihi: 6 Kasım 2026</p>
                 <p>Bu Gizlilik Politikası, Akılhar mobil uygulamasını ("Uygulama") kullanırken kişisel verilerinin nasıl
                     toplandığını, kullanıldığını ve korunduğunu açıklar. 6698 sayılı Kişisel Verilerin Korunması Kanunu
-                    ("KVKK") kapsamında veri sorumlusu Ercan Bagra'dır (iletişim: <b>bagraercan@gmail.com</b>).</p>
+                    ("KVKK") kapsamında veri sorumlusu Ercan Bagra'dır (iletişim:
+                    <a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a>).</p>
 
                 <h3>1. Topladığımız Veriler</h3>
                 <ul>
                     <li><strong>Hesap bilgileri:</strong> kullanıcı adı, ad, soyad ve şifre. Şifreler giriş sağlayıcımız
                         (Google Firebase) tarafından şifrelenmiş olarak saklanır; biz göremeyiz.</li>
                     <li><strong>İsteğe bağlı bilgiler:</strong> telefon numarası (ödül kazandığında sana ulaşabilmemiz
-                        için) ve seçtiğin avatar.</li>
+                        için), seçtiğin avatar ve çerçeve.</li>
                     <li><strong>Oyun verileri:</strong> skorlar, oynanan oyun sayısı, sıralama, turnuva katılımları ve
-                        puanlar, kazanılan ödüller, ödül bakiyesi ve hediye kartı talepleri.</li>
+                        puanları, ücretsiz deneme kullanımları, kazanılan ödüller, ödül bakiyesi ve hediye kartı
+                        talepleri.</li>
                     <li><strong>Cihaz ve bağlantı bilgileri:</strong> uygulamanın cihazın için oluşturduğu rastgele bir
-                        kimlik, cihazın markası, modeli, işletim sistemi sürümü ve adı, bildirim kimliği ve IP
-                        adresi.</li>
-                    <li><strong>Ödeme bilgileri:</strong> satın alınan oyunlar, tutar ve tarih. Kart numaranı göremez ve
-                        saklamayız; kartla ödemeler doğrudan Stripe tarafından işlenir.</li>
+                        kimlik, cihazın markası, modeli, işletim sistemi sürümü ve adı, bildirim kimliği ve son
+                        kullandığın birkaç IP adresi.</li>
+                    <li><strong>Satın alma bilgileri:</strong> satın aldığın oyunlar, paketler, avatarlar, çerçeveler ve
+                        reklamsız kullanım; tutar, bahşiş, ödeme yöntemi, tarih ve havale için referans kodu. Kart
+                        numaranı göremez ve saklamayız; kartla ödemeler doğrudan Stripe tarafından işlenir.</li>
                     <li><strong>Mesajlar:</strong> uygulama içinde sana gönderilen bildirim ve mesajlar.</li>
-                    <li><strong>Reklam verileri:</strong> Uygulama Google AdMob ile reklam gösterir. AdMob reklam kimliği,
-                        cihaz bilgileri, yaklaşık konum (IP'den) ve reklam etkileşimleri gibi verileri kendi politikasına
-                        göre toplayabilir.</li>
+                    <li><strong>Reklam verileri:</strong> Uygulama Google AdMob ile reklam gösterir. AdMob reklam
+                        kimliği, cihaz bilgileri, yaklaşık konum (IP'den) ve reklam etkileşimleri gibi verileri kendi
+                        politikasına göre toplayabilir. Reklamları kaldırdıysan sana yalnızca kendi isteğinle
+                        izlediğin ödüllü reklamlar gösterilir.</li>
                 </ul>
                 <p>Uygulama konum izni istemez; kişiler, fotoğraflar, mikrofon veya kamera gibi verilere erişmez.</p>
 
                 <h3>2. Verileri Neden Kullanıyoruz</h3>
                 <p>Verilerini hesabını oluşturmak ve oturumunu açık tutmak; oyunları, skorları, lider tablosunu ve
                     turnuvaları çalıştırmak; ödülleri belirlemek, incelemek ve hediye kartını sana ulaştırmak; satın
-                    aldığın oyunları açmak; sana bildirim göndermek; reklam göstermek; destek vermek ve yasal
-                    yükümlülükleri yerine getirmek için kullanırız. Cihaz bilgisi ve IP adresi yalnızca <strong>hile ve
-                    birden fazla hesap kullanımını önlemek</strong> için kullanılır ve yalnızca yöneticiler tarafından
-                    görülür. Verilerini satmayız.</p>
+                    aldıklarını açmak; sana bildirim göndermek; reklam göstermek; destek vermek ve yasal
+                    yükümlülükleri yerine getirmek için kullanırız. Cihaz bilgisi ve IP adresi yalnızca <strong>hile,
+                        birden fazla hesap kullanımı ve ücretsiz denemenin kötüye kullanılmasını önlemek</strong> için
+                    kullanılır ve yalnızca yöneticiler tarafından görülür. Verilerini satmayız.</p>
                 <p>Hukuki sebepler (KVKK m.5): sözleşmenin kurulması ve ifası, meşru menfaat (hile önleme ve güvenlik),
                     hukuki yükümlülük ve gerektiğinde açık rıza.</p>
 
                 <h3>3. Diğer Oyuncular Ne Görür</h3>
-                <p>Diğer oyuncular yalnızca <strong>kullanıcı adını, avatarını, skorlarını ve kazanma sayılarını</strong>
-                    görebilir. Adın, telefonun, cihaz bilgilerin ve IP adresin başka oyunculara gösterilmez.</p>
+                <p>Diğer oyuncular yalnızca <strong>kullanıcı adını, avatarını, çerçeveni, skorlarını ve kazanma
+                        sayılarını</strong> görebilir. Adın, telefonun, ödemelerin, cihaz bilgilerin ve IP adresin başka
+                    oyunculara gösterilmez.</p>
 
                 <h3>4. Saklama ve Güvenlik</h3>
                 <p>Verilerin Google Firebase (Google Cloud) sunucularında saklanır. Erişim kuralları sayesinde yalnızca
-                    kendi hesabını görebilirsin; skorlar ve ödüller yalnızca sunucu tarafından yazılabilir. Veriler
-                    şifreli bağlantı (HTTPS) ile aktarılır.</p>
+                    kendi hesabını görebilirsin; skorlar, ödüller ve satın alınanlar yalnızca sunucu tarafından
+                    yazılabilir. Veriler şifreli bağlantı (HTTPS) ile aktarılır.</p>
 
                 <h3>5. Verilerin Paylaşıldığı Hizmetler</h3>
                 <ul>
@@ -126,14 +151,16 @@
                     <li><strong>Stripe, Inc.:</strong> kartla ödemeler.</li>
                 </ul>
                 <p>Bu hizmetler verileri yurt dışındaki (ör. ABD) sunucularda işleyebilir; aktarım, KVKK'nın yurt dışına
-                    aktarım kurallarına uygun şekilde yapılır. Hediye kartları tarafımızdan satın alınır; kişisel
-                    verilerin A101 ile paylaşılmaz. Kanunen gerekli olduğunda veriler yetkili makamlarla
-                    paylaşılabilir.</p>
+                    aktarım kurallarına uygun şekilde yapılır. Havale / EFT ödemelerinde bankanın bize gösterdiği
+                    gönderen bilgisi yalnızca ödemeyi eşleştirmek için kullanılır. Hediye kartları tarafımızdan satın
+                    alınır; kişisel verilerin A101 ile paylaşılmaz. Kanunen gerekli olduğunda veriler yetkili
+                    makamlarla paylaşılabilir.</p>
 
                 <h3>6. Saklama Süresi</h3>
                 <p>Veriler hesabın açık olduğu sürece saklanır. Hesabını sildiğinde profilin, skorların, ödül bakiyen,
-                    mesajların, cihaz bilgilerin ve turnuva kayıtların silinir. Ödeme ve gönderilmiş hediye kartı
-                    kayıtları, vergi ve muhasebe mevzuatı gereği kanunun öngördüğü süre boyunca saklanabilir.</p>
+                    satın aldığın oyunlar, avatarlar ve çerçeveler, mesajların, cihaz bilgilerin ve turnuva kayıtların
+                    silinir. Ödeme ve gönderilmiş hediye kartı kayıtları, vergi ve muhasebe mevzuatı gereği kanunun
+                    öngördüğü süre boyunca saklanabilir.</p>
 
                 <h3>7. KVKK Kapsamındaki Hakların</h3>
                 <p>KVKK m.11 uyarınca verilerinin işlenip işlenmediğini öğrenme, bilgi talep etme, düzeltilmesini veya
@@ -150,16 +177,16 @@
                     tarihi güncellenir.</p>
 
                 <h3>10. İletişim</h3>
-                <p>Sorular ve talepler için: <b>bagraercan@gmail.com</b></p>
-            </div>
+                <p>Sorular ve talepler için: <a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a></p>
+            </section>
 
             <!-- Contest rules -->
-            <div class="tab-pane fade" id="yarisma-kurallari" role="tabpanel" aria-labelledby="yarisma-kurallari-tab">
-                <h2 class="mt-3">Yarışma Kuralları</h2>
-                <p><strong>Yürürlük tarihi: 5 Kasım 2026</strong> · Düzenleyen: Ercan Bagra
-                    (<b>bagraercan@gmail.com</b>)</p>
-                <p><strong>Google ve Apple bu yarışmaların sponsoru değildir ve yarışmalarla hiçbir şekilde ilişkili
-                    değildir.</strong> Yarışmalar yalnızca Akılhar tarafından düzenlenir.</p>
+            <section id="yarisma-kurallari">
+                <h2>Yarışma Kuralları</h2>
+                <p class="meta">Yürürlük tarihi: 6 Kasım 2026 · Düzenleyen: Ercan Bagra
+                    (<a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a>)</p>
+                <p class="note"><strong>Google ve Apple bu yarışmaların sponsoru değildir ve yarışmalarla hiçbir şekilde
+                        ilişkili değildir.</strong> Yarışmalar yalnızca Akılhar tarafından düzenlenir.</p>
 
                 <h3>1. Katılım</h3>
                 <ul>
@@ -167,12 +194,15 @@
                     <li>Katılmak için bir Akılhar hesabı gerekir; hesap bilgilerinin doğru olması gerekir.</li>
                     <li>Ödül alabilmek için 18 yaşını doldurmuş olmak ya da veli/vasi onayına sahip olmak gerekir.</li>
                     <li>Her kişi <strong>yalnızca bir hesapla</strong> yarışabilir.</li>
+                    <li>Tüm saatler Türkiye saatidir; telefonun saatinden bağımsızdır.</li>
                 </ul>
 
                 <h3>2. Haftalık Harita Yarışması</h3>
                 <ul>
-                    <li>Hafta salı 00:00'da başlar, pazar 23:59'da biter (Türkiye saati). Pazartesi tatildir: oynanabilir
-                        ama skorlar sayılmaz.</li>
+                    <li>Sıralamaya yalnızca Harita oyunu sayılır. Turnuva içinde oynanan oyunlar haftalık sıralamaya
+                        sayılmaz.</li>
+                    <li>Hafta salı 00:00'da başlar, pazar 23:59'da biter. Pazartesi tatildir: oynanabilir ama skorlar
+                        sayılmaz.</li>
                     <li>Sıralama: önce haftanın en yüksek tek skoru, eşitlikte haftalık toplam skor, sonra oynanan oyun
                         sayısı.</li>
                     <li>Haftanın <strong>ilk 3 oyuncusu</strong> ödül kazanır. Ödül tutarları uygulamadaki yarışma
@@ -184,22 +214,32 @@
 
                 <h3>3. Turnuvalar</h3>
                 <ul>
-                    <li>Turnuvalar zaman zaman düzenlenir; tarihleri uygulamada duyurulur.</li>
-                    <li>Turnuvaya katılım ücretsizdir. Turnuvanın tüm oyunları, katılan herkes için turnuva süresince
-                        ücretsiz oynanır.</li>
+                    <li>Haftada <strong>en fazla bir</strong> turnuva düzenlenir; bazı haftalar turnuva olmayabilir.
+                        Turnuva ve oyunları uygulamada duyurulur.</li>
+                    <li>Turnuva salı 00:00'da başlar, pazar 23:59'da biter. Pazartesi sonuçlar ve ödüller açıklanır.
+                        Süre bittikten sonra biten oyunların skoru sayılmaz.</li>
+                    <li>Turnuvaya katılmak için o hafta en az <strong>70 Harita oyunu</strong> oynamış olmak gerekir. Bu
+                        şartı tamamlayan oyuncu turnuva süresince istediği zaman katılabilir.</li>
+                    <li>Katılım ücretsizdir. Turnuvanın tüm oyunları, katılan herkes için turnuva süresince ücretsiz
+                        oynanır.</li>
+                    <li>Turnuvadaki her oyun bir kez oynanır; oyuna girildiğinde hak kullanılmış olur. Oyunu bitirmeden
+                        çıkan oyuncu o oyundan 0 puan alır.</li>
+                    <li>Her turnuva oyunundan sonra en fazla 3 reklam izlenerek bonus puan kazanılabilir; tutarları
+                        uygulamada gösterilir.</li>
                     <li>Tüm oyuncular tek sıralamada yarışır; ilk 3 ödül kazanır. Eşit puanlı oyuncular kapsadıkları
-                        sıraların ödüllerini eşit paylaşır. Hiç oynamayan oyuncu ödül alamaz.</li>
-                    <li>Turnuvadaki her oyun bir kez oynanır; oyundan çıkan oyuncu o oyundan 0 puan alır.</li>
+                        sıraların ödüllerini eşit paylaşır. Hiç oynamayan oyuncu ödül alamaz ve ödül sırası
+                        almaz.</li>
                 </ul>
 
                 <h3>4. Ödüller</h3>
                 <ul>
-                    <li>Ödüller, sonuçlar kontrol edildikten sonra oyuncunun uygulamadaki <strong>ödül bakiyesine</strong>
-                        eklenir. Kontrolde kurallara aykırı bulunan ödüller iptal edilir.</li>
+                    <li>Ödüller, sonuçlar kontrol edildikten sonra oyuncunun uygulamadaki <strong>ödül
+                            bakiyesine</strong> eklenir. Kontrolde kurallara aykırı bulunan ödüller iptal edilir.</li>
                     <li>Bakiye 100 TL'ye ulaştığında oyuncu, 100 TL ve katları olarak <strong>A101 hediye kartı</strong>
                         isteyebilir. Kart kodu uygulama içinde iletilir.</li>
                     <li>Ödül bakiyesi nakde çevrilemez, başkasına devredilemez ve uygulama içinde harcanamaz.</li>
                     <li>12 ay boyunca bakiyeye ekleme ya da kart talebi olmazsa bakiye sona erer.</li>
+                    <li>Engellenen hesaplara ödül eklenmez ve hediye kartı verilmez.</li>
                     <li>Hediye kartının kullanımı A101'in kurallarına tabidir.</li>
                 </ul>
 
@@ -207,9 +247,10 @@
                 <ul>
                     <li>Skorlar sunucuda kaydedilir ve kontrol edilir; elle skor girilemez.</li>
                     <li>Hile, üçüncü parti program kullanımı, oyunun açıklarından yararlanma ve <strong>birden fazla hesap
-                        kullanma</strong> yasaktır. Tespit edilen oyuncular diskalifiye edilir, ödülleri ve bakiyeleri
-                        iptal edilir ve hesapları engellenebilir.</li>
-                    <li>Hile önleme amacıyla cihaz bilgisi ve IP adresi kullanılır (Gizlilik Politikası).</li>
+                            kullanma</strong> yasaktır. Tespit edilen oyuncular diskalifiye edilir, ödülleri ve
+                        bakiyeleri iptal edilir ve hesapları engellenebilir.</li>
+                    <li>Hile önleme amacıyla cihaz bilgisi ve IP adresi kullanılır (bkz. <a href="#gizlilik">Gizlilik
+                            Politikası</a>).</li>
                 </ul>
 
                 <h3>6. Diğer</h3>
@@ -218,32 +259,34 @@
                     <li>Sistemden kaynaklanan teknik bir sorunda düzenleyen durumu inceleyip karar verir.</li>
                     <li>Düzenleyen kuralları önceden duyurarak değiştirebilir ya da yarışmayı sona erdirebilir; o ana
                         kadar kazanılmış ve onaylanmış ödüller korunur.</li>
-                    <li>Sorular ve itirazlar için: <b>bagraercan@gmail.com</b></li>
+                    <li>Sorular ve itirazlar için: <a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a></li>
                 </ul>
-            </div>
+            </section>
 
             <!-- Account deletion -->
-            <div class="tab-pane fade" id="hesap-silme" role="tabpanel" aria-labelledby="hesap-silme-tab">
-                <h2 class="mt-3">Akılhar Hesabını Silme</h2>
+            <section id="hesap-silme">
+                <h2>Akılhar Hesabını Silme</h2>
 
                 <h3>Uygulamadan silme</h3>
-                <ol>
+                <ol class="steps">
                     <li>Akılhar'ı aç ve giriş yap.</li>
                     <li><strong>Profil</strong> sekmesine git.</li>
-                    <li><strong>Hesabımı Sil</strong>'e dokun, şifreni gir ve onayla.</li>
+                    <li>Sayfanın en altındaki <strong>Hesabımı sil</strong>'e dokun, şifreni gir ve onayla.</li>
                 </ol>
                 <p>Hesabın hemen ve kalıcı olarak silinir.</p>
 
                 <h3>Uygulamaya erişemiyorsan</h3>
-                <p><b>bagraercan@gmail.com</b> adresine, hesabının <strong>kullanıcı adını</strong> yazarak "Akılhar
-                    hesabımı silin" başlıklı bir e-posta gönder. Hesabın sana ait olduğunu doğruladıktan sonra en geç 30
-                    gün içinde siler ve e-postayla bilgi veririz.</p>
+                <p><a href="mailto:bagraercan@gmail.com?subject=Ak%C4%B1lhar%20hesab%C4%B1m%C4%B1%20silin">bagraercan@gmail.com</a>
+                    adresine, hesabının <strong>kullanıcı adını</strong> yazarak "Akılhar hesabımı silin" başlıklı bir
+                    e-posta gönder. Hesabın sana ait olduğunu doğruladıktan sonra en geç 30 gün içinde siler ve
+                    e-postayla bilgi veririz.</p>
 
                 <h3>Neler silinir</h3>
                 <ul>
-                    <li>Profilin (ad, soyad, telefon, avatar)</li>
+                    <li>Profilin (ad, soyad, telefon, avatar ve çerçeve)</li>
                     <li>Skorların, sıralaman ve kazanma geçmişin</li>
                     <li>Turnuva kayıtların</li>
+                    <li>Satın aldığın oyunlar, avatarlar, çerçeveler ve reklamsız kullanım</li>
                     <li>Ödül bakiyen ve henüz gönderilmemiş hediye kartı taleplerin</li>
                     <li>Mesajların, cihaz bilgilerin ve IP kayıtların</li>
                 </ul>
@@ -254,29 +297,21 @@
                         öngördüğü süre boyunca saklanabilir.</li>
                     <li>Geçmiş haftaların kazanan listelerinde yalnızca kullanıcı adın kalabilir.</li>
                 </ul>
-                <p><strong>Dikkat:</strong> silinen hesap geri getirilemez; ödül bakiyesi ve satın alınan oyunlar da
-                    kaybolur.</p>
-            </div>
+                <p class="note"><strong>Dikkat:</strong> silinen hesap geri getirilemez; ödül bakiyen ve satın aldığın
+                    her şey (oyunlar, avatarlar, çerçeveler, reklamsız kullanım) da kaybolur.</p>
+            </section>
+
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="footer-section py-4 bg-dark text-white text-center">
-        <a href="../index.html" class="btn btn-light">Tüm Uygulamalar</a>
+    <footer>
+        <div class="wrap narrow">
+            <a href="../index.html">← Tüm uygulamalar</a>
+            <span>&copy; 2026 Ercan Bagra · <a href="mailto:bagraercan@gmail.com">bagraercan@gmail.com</a></span>
+        </div>
     </footer>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
-
-    <!-- Opens the tab named in the link, e.g. index.html#gizlilik -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const id = window.location.hash.slice(1);
-            const tab = id && document.querySelector('#' + id + '-tab');
-            if (tab) new bootstrap.Tab(tab).show();
-        });
-    </script>
+    <script src="../site.js"></script>
 </body>
 
 </html>
